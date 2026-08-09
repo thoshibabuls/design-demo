@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en" data-dir="a">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Weekend Film School — four directions, one page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Anybody:wdth,wght@50..150,100..900&family=Familjen+Grotesk:wght@400..700&family=DM+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Martian+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════════════════
+   THE WEEKEND FILM SCHOOL — DIRECTION DEMO
+   One page. Four complete visual directions. Press 1–4 or use the bar.
+
+   Every direction owns: a palette, a type system, a material rule, and one
+   signature device. Nothing here is a skin swap — the page changes weight,
+   density, edge treatment and marker behaviour with the palette.
+
+   All copy is real and traced to Film School/WeekendFilmSchool_Story.pdf,
+   the prototype, and PLAN_LANDING_PAGE_V2.md's correction register.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── reset ───────────────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+
+/* ═══ DIRECTION A — "CALL SHEET" ══════════════════════════════════════════
+   Thesis: this school already has an identity, and it is production
+   paperwork. Ink and rules on script-revision paper stock. The stock colour
+   IS the message — blue is the schedule, goldenrod is money, green is you're
+   in. Signature: the green revision asterisk against the one line that
+   matters, and a checkable serial on every block.                          */
+[data-dir="a"]{
+  --field:#EAE6DC; --field-2:#EAE6DC; --field-3:#DFDACD;
+  --stock-schedule:#C3D6E8; --stock-money:#EFD27A; --stock-closed:#E9AEB2; --stock-in:#C6DEC6;
+  --ink:#14161A; --ink-70:#4A4E56; --ink-40:#5F656B;
+  --accent:#17693F; --accent-ink:#EAE6DC; --on-accent:#EAE6DC;
+  --rule:#14161A; --rule-w:2px; --rule-hair:1px;
+  --radius:0; --shadow:none; --shadow-lift:none;
+  --f-display:"Archivo","Segoe UI",system-ui,sans-serif;
+  --f-body:"Archivo","Segoe UI",system-ui,sans-serif;
+  --f-data:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --d-wght:900; --d-wdth:112; --d-track:-.035em; --d-lh:.9;
+  --data-track:.13em; --data-size:.68rem; --data-wght:500;
+  --body-track:-.012em; --body-lh:1.42;
+  --band-pad:clamp(48px,7vw,88px);
+  --marker:"*"; --marker-col:var(--accent); --marker-wght:700; --marker-size:1.1em;
+  --inverted-bg:#14161A; --inverted-ink:#EAE6DC; --inverted-dim:#8A9099; --inverted-accent:#3FBF77;
+}
+/* ═══ DIRECTION B — "HARD LIGHT" ══════════════════════════════════════════
+   Thesis: every film brand sells the dark room. This day happens at noon on
+   a Hyderabad terrace, in the light every cinematographer is trained to
+   avoid. So: pale limewash field, green-black type, and one sun directly
+   overhead. Signature: every raised object casts the same hard shadow —
+   straight down, zero blur, always 6px. A second offset would be a second
+   sun. Accent is a tally light: it means someone is recording.            */
+[data-dir="b"]{
+  --field:#E6ECE2; --field-2:#DBE3D6; --field-3:#CBD5C5;
+  --stock-schedule:#DBE3D6; --stock-money:#DBE3D6; --stock-closed:#CBD5C5; --stock-in:#DBE3D6;
+  --ink:#141A18; --ink-70:#4C5450; --ink-40:#5A625E;
+  --accent:#C4241C; --accent-ink:#EDF1EA; --on-accent:#EDF1EA;
+  --cast:#6F7874;
+  --rule:#141A18; --rule-w:2px; --rule-hair:1px;
+  --radius:0; --shadow:0 6px 0 0 var(--cast); --shadow-lift:0 3px 0 0 var(--cast);
+  --f-display:"Archivo","Segoe UI",system-ui,sans-serif;
+  --f-body:"Archivo","Segoe UI",system-ui,sans-serif;
+  --f-data:"Archivo","Segoe UI",system-ui,sans-serif;
+  --d-wght:900; --d-wdth:124; --d-track:-.038em; --d-lh:.86;
+  --data-track:.1em; --data-size:.72rem; --data-wght:600;
+  --body-track:-.011em; --body-lh:1.45;
+  --band-pad:clamp(56px,8vw,104px);
+  --marker:""; --marker-col:var(--accent); --marker-wght:400; --marker-size:1em;
+  --inverted-bg:#141A18; --inverted-ink:#EDF1EA; --inverted-dim:#A3ABA7; --inverted-accent:#E8493F;
+}
+/* ═══ DIRECTION C — "WILDPOSTING" ═════════════════════════════════════════
+   Thesis: this is not an institute, it is a flyer pasted on a wall by
+   somebody with no permission and a deadline. Two-ink riso on newsprint:
+   one blue plate, one fluorescent plate, misregistered by 2px because
+   nobody was careful. Signature: the misregistration itself — headlines
+   print twice, slightly off, the way a cheap two-colour press actually
+   fails. Halftone in the shade. Nothing is straight.                      */
+[data-dir="c"]{
+  --field:#E4E2DA; --field-2:#DAD8CE; --field-3:#CFCCC0;
+  --stock-schedule:#DAD8CE; --stock-money:#F5325B; --stock-closed:#CFCCC0; --stock-in:#DAD8CE;
+  --ink:#171C3A; --ink-70:#4A4F72; --ink-40:#565B78;
+  --accent:#F5325B; --accent-ink:#FFF6F0; --on-accent:#FFF6F0;
+  --ink-blue:#1B2ECC;
+  --rule:#171C3A; --rule-w:3px; --rule-hair:2px;
+  --radius:0; --shadow:none; --shadow-lift:none;
+  --f-display:"Anybody","Archivo","Segoe UI",system-ui,sans-serif;
+  --f-body:"Familjen Grotesk","Segoe UI",system-ui,sans-serif;
+  --f-data:"DM Mono",ui-monospace,Menlo,monospace;
+  --d-wght:800; --d-wdth:82; --d-track:-.02em; --d-lh:.84;
+  --data-track:.09em; --data-size:.7rem; --data-wght:500;
+  --body-track:0em; --body-lh:1.4;
+  --band-pad:clamp(44px,6.5vw,80px);
+  --marker:"■"; --marker-col:var(--accent); --marker-wght:400; --marker-size:.7em;
+  --inverted-bg:#171C3A; --inverted-ink:#E4E2DA; --inverted-dim:#8E93B0; --inverted-accent:#FF6B8C;
+}
+/* ═══ DIRECTION D — "EDIT BAY" ════════════════════════════════════════════
+   Thesis: dark, but not the auditorium. This is the graded monitor at 5 PM
+   when the thing you shot becomes a film. Graphite, not black. The accents
+   are instrument colours, not mood: scope green reads values, guide magenta
+   draws the frame. Signature: the page is framed like a monitor — corner
+   ticks, a 2.39:1 guide across the hero, running timecode in the chrome.  */
+[data-dir="d"]{
+  --field:#1C2024; --field-2:#23282D; --field-3:#141719;
+  --stock-schedule:#23282D; --stock-money:#23282D; --stock-closed:#141719; --stock-in:#23282D;
+  --ink:#E8EAEC; --ink-70:#99A1A8; --ink-40:#868E95;
+  --accent:#3DE08A; --accent-ink:#0E1113; --on-accent:#0E1113;
+  --guide:#FF4FD8;
+  --rule:#333B41; --rule-w:1px; --rule-hair:1px;
+  --radius:2px; --shadow:none; --shadow-lift:none;
+  --f-display:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --f-data:"Martian Mono",ui-monospace,Menlo,monospace;
+  --d-wght:700; --d-wdth:100; --d-track:-.03em; --d-lh:.95;
+  --data-track:.02em; --data-size:.63rem; --data-wght:500;
+  --body-track:-.005em; --body-lh:1.5;
+  --band-pad:clamp(48px,7vw,88px);
+  --marker:""; --marker-col:var(--guide); --marker-wght:400; --marker-size:1em;
+  --inverted-bg:#0E1113; --inverted-ink:#E8EAEC; --inverted-dim:#6B7278; --inverted-accent:#3DE08A;
+}
+
+/* ── base ────────────────────────────────────────────────────────────────── */
+body{
+  background:var(--field); color:var(--ink);
+  font-family:var(--f-body); font-size:clamp(15px,.4vw + 14px,17px);
+  line-height:var(--body-lh); letter-spacing:var(--body-track);
+  font-variation-settings:"wdth" 100,"wght" 420;
+  padding-bottom:96px;
+}
+[data-dir="c"] body{font-variation-settings:normal}
+:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+[data-dir="d"] :focus-visible{outline-color:var(--guide)}
+
+.wrap{width:min(1120px,100% - 2 * clamp(16px,4vw,40px)); margin-inline:auto; position:relative; z-index:1}
+.band{padding-block:var(--band-pad); background:var(--field)}
+.band--alt{background:var(--field-2)}
+[data-dir="a"] .band[data-stock="schedule"]{background:var(--stock-schedule)}
+[data-dir="a"] .band[data-stock="money"]{background:var(--stock-money)}
+[data-dir="a"] .band[data-stock="in"]{background:var(--stock-in)}
+[data-dir="b"] .band[data-stock]{background:var(--field)}
+[data-dir="c"] .band[data-stock="schedule"]{background:var(--field-2)}
+[data-dir="d"] .band[data-stock]{background:var(--field-2)}
+
+/* ── type roles ──────────────────────────────────────────────────────────── */
+.display{
+  font-family:var(--f-display);
+  font-variation-settings:"wdth" var(--d-wdth),"wght" var(--d-wght);
+  font-weight:var(--d-wght);
+  letter-spacing:var(--d-track); line-height:var(--d-lh);
+  text-wrap:balance;
+}
+[data-dir="c"] .display{font-variation-settings:"wdth" var(--d-wdth),"wght" var(--d-wght)}
+h1.display{font-size:clamp(2.6rem,7.4vw,5.6rem)}
+h2.display{font-size:clamp(1.85rem,4vw,3.1rem)}
+h3.display{font-size:clamp(1.1rem,1.6vw,1.4rem); line-height:1.1}
+.data{
+  font-family:var(--f-data); font-size:var(--data-size); font-weight:var(--data-wght);
+  letter-spacing:var(--data-track); text-transform:uppercase;
+  font-variant-numeric:tabular-nums; line-height:1.3;
+}
+[data-dir="b"] .data{font-variation-settings:"wdth" 92,"wght" 600}
+.dim{color:var(--ink-70)}
+.lede{font-size:clamp(1.05rem,1.4vw,1.25rem); color:var(--ink-70); max-width:56ch; text-wrap:pretty}
+.eyebrow{color:var(--ink-70); display:block; margin-bottom:14px}
+[data-dir="d"] .eyebrow{color:var(--accent)}
+
+/* the marker: one element, four behaviours */
+.mk{position:relative}
+.mk::before{
+  content:var(--marker); position:absolute; left:-1.15em; top:.05em;
+  color:var(--marker-col); font-weight:var(--marker-wght); font-size:var(--marker-size);
+  font-family:var(--f-data);
+}
+[data-dir="b"] .mk::before{
+  content:""; width:9px; height:9px; background:var(--accent);
+  top:.55em; left:-1.4em; border-radius:50%;
+}
+[data-dir="d"] .mk::before{
+  content:""; width:10px; height:1px; background:var(--guide);
+  top:.72em; left:-1.5em; box-shadow:0 4px 0 0 var(--guide);
+}
+@media(max-width:720px){ .mk::before{display:none} }
+
+/* ── chrome ──────────────────────────────────────────────────────────────── */
+.nav{
+  position:sticky; top:0; z-index:40; background:var(--field);
+  border-bottom:var(--rule-w) solid var(--rule);
+}
+[data-dir="d"] .nav{background:color-mix(in srgb,var(--field) 92%,transparent); backdrop-filter:blur(6px)}
+.nav__in{display:flex; align-items:center; gap:clamp(10px,2vw,26px); min-height:62px}
+.brand{display:flex; align-items:center; gap:10px; margin-right:auto}
+.brand svg{width:26px; height:26px; flex:none}
+.brand .nm{font-family:var(--f-display); font-variation-settings:"wdth" 100,"wght" 800;
+  font-weight:800; letter-spacing:-.02em; font-size:.94rem; line-height:1}
+.navlinks{display:flex; gap:2px}
+.navlinks a{padding:8px 11px; color:var(--ink-70); font-size:.86rem}
+.navlinks a:hover{color:var(--ink); text-decoration:underline; text-underline-offset:4px}
+@media(max-width:860px){.navlinks{display:none}}
+.tc{color:var(--ink-40)}
+@media(max-width:520px){.tc{display:none}}
+
+/* ── buttons ─────────────────────────────────────────────────────────────── */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  min-height:46px; padding:12px 22px; border:var(--rule-w) solid var(--rule);
+  background:transparent; color:var(--ink); border-radius:var(--radius);
+  font-family:var(--f-body); font-weight:600; font-size:.95rem; cursor:pointer;
+  transition:transform 140ms cubic-bezier(.2,0,0,1), background 140ms, color 140ms;
+}
+.btn--primary{background:var(--ink); color:var(--field); border-color:var(--ink)}
+[data-dir="b"] .btn--primary{box-shadow:var(--shadow); border:none}
+[data-dir="b"] .btn--primary:active{transform:translateY(6px); box-shadow:none}
+[data-dir="c"] .btn--primary{background:var(--ink-blue); color:var(--accent-ink); border-color:var(--ink-blue)} /* 8.5:1 */
+[data-dir="d"] .btn--primary{background:var(--accent); color:var(--accent-ink); border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+[data-dir="b"] .btn--primary:hover{transform:translateY(-2px); box-shadow:0 8px 0 0 var(--cast)}
+
+/* ── hero ────────────────────────────────────────────────────────────────── */
+.hero{padding-block:clamp(44px,7vw,92px) clamp(40px,6vw,80px); position:relative; overflow:hidden}
+[data-dir="d"] .hero::before,[data-dir="d"] .hero::after{
+  content:""; position:absolute; left:0; right:0; height:1px; background:var(--guide); opacity:.5;
+}
+[data-dir="d"] .hero::before{top:clamp(28px,4vw,52px)}
+[data-dir="d"] .hero::after{bottom:clamp(28px,4vw,52px)}
+.hero h1{margin-bottom:22px}
+.hero h1 em{font-style:normal; color:var(--accent)}
+[data-dir="a"] .hero h1 em{color:var(--accent)}
+[data-dir="b"] .hero h1 em{color:var(--accent)}   /* 7.1:1 on --sun */
+[data-dir="c"] .hero h1 em{color:var(--ink-blue)}
+[data-dir="d"] .hero h1 em{color:var(--accent)}
+.hero .lede{margin-bottom:30px}
+.blank{
+  display:inline-block; min-width:clamp(140px,26vw,340px);
+  border-bottom:6px solid var(--ink); vertical-align:baseline;
+}
+[data-dir="d"] .blank{border-bottom-color:var(--accent); border-bottom-width:4px}
+.myths{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1px;
+  background:var(--rule); border:var(--rule-w) solid var(--rule); margin-bottom:28px;
+}
+[data-dir="d"] .myths{gap:1px}
+.myth{background:var(--field); padding:15px 17px}
+.myth s{display:block; color:var(--ink-40); font-size:.84rem; margin-bottom:5px;
+  text-decoration-thickness:1px}
+.myth span{font-size:.92rem; display:block; text-wrap:pretty}
+.cta-row{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+.cta-note{font-size:.84rem; color:var(--ink-70)}
+
+/* ── the four numbers ────────────────────────────────────────────────────── */
+.figures{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0}
+.fig{padding:20px 22px 20px 0; border-top:var(--rule-w) solid var(--rule)}
+.fig b{display:block; font-family:var(--f-display);
+  font-variation-settings:"wdth" var(--d-wdth),"wght" var(--d-wght); font-weight:var(--d-wght);
+  font-size:clamp(2rem,4.4vw,3.2rem); line-height:.95; letter-spacing:var(--d-track);
+  font-variant-numeric:tabular-nums}
+[data-dir="d"] .fig b{color:var(--accent)}
+.fig span{display:block; margin-top:8px; color:var(--ink-70); font-size:.88rem; max-width:22ch}
+
+/* ── generic grids ───────────────────────────────────────────────────────── */
+.grid{display:grid; gap:1px; background:var(--rule); border:var(--rule-w) solid var(--rule)}
+.grid > *{background:var(--field); padding:20px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(258px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.g5{grid-template-columns:repeat(auto-fit,minmax(172px,1fr))}
+[data-dir="b"] .grid{background:transparent; border:none; gap:0}
+[data-dir="b"] .grid > *{background:transparent; border-top:var(--rule-w) solid var(--rule); padding:20px 24px 24px 0}
+[data-dir="d"] .grid{background:var(--rule)}
+[data-dir="d"] .grid > *{background:var(--field-2)}
+.cell h3{margin-bottom:8px}
+.cell p{font-size:.93rem; color:var(--ink-70); text-wrap:pretty}
+.cell .data{margin-top:12px; color:var(--ink-40); display:block}
+.cell .role{display:block; margin-bottom:6px}
+.head{margin-bottom:26px}
+.head h2{margin-bottom:12px}
+
+/* ── the day ─────────────────────────────────────────────────────────────── */
+.day{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1px;
+  background:var(--rule); border:var(--rule-w) solid var(--rule)}
+.blk{background:var(--field); padding:18px 18px 22px}
+[data-dir="a"] .band[data-stock="schedule"] .blk{background:var(--stock-schedule)}
+[data-dir="b"] .day{background:transparent; border:none; gap:0; border-top:var(--rule-w) solid var(--rule)}
+[data-dir="b"] .blk{padding:18px 22px 26px 0}
+[data-dir="d"] .blk{background:var(--field-3)}
+.blk .t{color:var(--accent); display:block; margin-bottom:9px}
+[data-dir="a"] .blk .t{color:var(--accent)}
+[data-dir="c"] .blk .t{color:var(--ink-blue)}
+.blk h3{margin-bottom:6px}
+.blk p{font-size:.88rem; color:var(--ink-70)}
+.blk--free .t{position:relative}
+.rule-note{margin-top:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:26px}
+.rule-note p{font-size:.95rem; color:var(--ink-70)}
+.rule-note h3{margin-bottom:8px}
+
+/* ── the ladder ──────────────────────────────────────────────────────────── */
+.ladder{border-top:var(--rule-w) solid var(--rule)}
+.rung{display:grid; grid-template-columns:minmax(150px,180px) 1fr minmax(120px,150px);
+  gap:22px; padding:22px 0; border-bottom:var(--rule-w) solid var(--rule); align-items:start}
+@media(max-width:760px){.rung{grid-template-columns:1fr; gap:10px}}
+.rung__step{color:var(--ink-40); display:block; margin-bottom:6px}
+.rung__name{font-family:var(--f-display);
+  font-variation-settings:"wdth" var(--d-wdth),"wght" var(--d-wght); font-weight:var(--d-wght);
+  font-size:clamp(1.3rem,2.2vw,1.75rem); line-height:1; letter-spacing:var(--d-track)}
+.rung p{font-size:.95rem; text-wrap:pretty}
+.rung .who{display:block; margin-top:8px; color:var(--ink-40); font-size:.85rem}
+.rung__price{text-align:right; font-family:var(--f-display);
+  font-variation-settings:"wdth" var(--d-wdth),"wght" var(--d-wght); font-weight:var(--d-wght);
+  font-size:clamp(1.15rem,1.8vw,1.5rem); font-variant-numeric:tabular-nums; letter-spacing:-.02em}
+@media(max-width:760px){.rung__price{text-align:left}}
+[data-dir="d"] .rung__price{color:var(--accent)}
+[data-dir="c"] .rung__price{color:var(--ink-blue)}
+.rung--top{opacity:.72}
+
+/* ── dates ───────────────────────────────────────────────────────────────── */
+.dates{border-top:var(--rule-w) solid var(--rule)}
+.dt{display:grid; grid-template-columns:96px 1fr auto; gap:20px; align-items:center;
+  padding:18px 0; border-bottom:var(--rule-w) solid var(--rule)}
+@media(max-width:720px){.dt{grid-template-columns:1fr; gap:10px}}
+.dt__when b{display:block; font-family:var(--f-display);
+  font-variation-settings:"wdth" var(--d-wdth),"wght" var(--d-wght); font-weight:var(--d-wght);
+  font-size:1.85rem; line-height:1; font-variant-numeric:tabular-nums}
+.dt__when span{display:block; margin-top:4px; color:var(--ink-40)}
+.dt h3{margin-bottom:5px}
+.dt .meta{font-size:.87rem; color:var(--ink-70)}
+.dt__act{display:flex; flex-direction:column; align-items:flex-end; gap:8px}
+@media(max-width:720px){.dt__act{align-items:flex-start}}
+.tag{display:inline-block; padding:4px 9px; border:var(--rule-hair) solid var(--rule);
+  border-radius:var(--radius)}
+[data-dir="b"] .tag{border:none; background:var(--field-3); box-shadow:var(--shadow-lift)}
+[data-dir="c"] .tag{background:var(--ink-blue); color:#E4E2DA; border-color:var(--ink-blue)}
+[data-dir="d"] .tag{border-color:var(--rule); color:var(--ink-70)}
+.price-note{margin-top:22px; font-size:.93rem; color:var(--ink-70); max-width:60ch}
+.price-note b{font-variant-numeric:tabular-nums}
+
+/* ── inverted block (the screening) ──────────────────────────────────────── */
+.invert{background:var(--inverted-bg); color:var(--inverted-ink)}
+.invert .dim,.invert .lede{color:var(--inverted-dim)}
+.invert .eyebrow{color:var(--inverted-accent)}
+.invert .empty{border-color:var(--inverted-dim)}
+.empty{border:var(--rule-w) dashed var(--inverted-dim); padding:32px 26px; margin-top:22px;
+  border-radius:var(--radius)}
+.empty p{color:var(--inverted-dim); max-width:58ch; margin-top:10px}
+
+/* ── faq ─────────────────────────────────────────────────────────────────── */
+.faq{border-top:var(--rule-w) solid var(--rule)}
+.qa{border-bottom:var(--rule-w) solid var(--rule)}
+.qa summary{list-style:none; cursor:pointer; padding:16px 0; display:flex; gap:16px;
+  align-items:baseline; font-weight:600; font-size:1rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+"; margin-left:auto; font-family:var(--f-data); color:var(--ink-40)}
+.qa[open] summary::after{content:"–"}
+.qa summary:hover{color:var(--accent)}
+[data-dir="a"] .qa summary:hover{color:var(--accent)}
+.qa p{padding:0 0 18px; max-width:68ch; color:var(--ink-70); font-size:.95rem}
+
+/* ── form ────────────────────────────────────────────────────────────────── */
+.form{max-width:520px}
+[data-dir="b"] .form{background:var(--field-2); padding:26px; box-shadow:var(--shadow)}
+[data-dir="d"] .form{background:var(--field-3); padding:26px; border:1px solid var(--rule)}
+[data-dir="c"] .form{background:var(--field-2); padding:26px; border:3px solid var(--ink)}
+.field{margin-bottom:16px}
+.field label{display:block; margin-bottom:6px}
+.field input,.field select{
+  width:100%; padding:12px 14px; background:var(--field); color:var(--ink);
+  border:var(--rule-w) solid var(--rule); border-radius:var(--radius); min-height:46px;
+}
+[data-dir="d"] .field input,[data-dir="d"] .field select{background:var(--field); border-color:var(--rule)}
+.field .hint{display:block; margin-top:6px; color:var(--ink-40); font-size:.8rem}
+.form .btn{width:100%}
+
+/* ── footer ──────────────────────────────────────────────────────────────── */
+.foot{border-top:var(--rule-w) solid var(--rule); padding-block:28px; color:var(--ink-40)}
+.foot .data{display:block}
+
+/* ═══ SIGNATURE DEVICES ═══════════════════════════════════════════════════ */
+
+/* A — the printed page: 2px ink frame, serials, revision asterisk */
+[data-dir="a"] .serial{position:absolute; top:calc(var(--band-pad) * -.42); right:0; color:var(--ink-40)}
+.serial{display:none}
+[data-dir="a"] .serial{display:block}
+[data-dir="a"] .band{position:relative}
+[data-dir="a"] .page-frame{
+  position:fixed; inset:10px; border:2px solid var(--ink); pointer-events:none; z-index:30;
+}
+@media(max-width:720px){[data-dir="a"] .page-frame{inset:6px}}
+
+/* B — one sun. Everything raised casts the same shadow, straight down.
+   And nothing has an outline: an object is its fill plus its shadow. */
+[data-dir="b"] .page-frame{display:none}
+[data-dir="b"] .figures .fig{border-top-width:2px}
+[data-dir="b"] .myths{
+  background:transparent; border:0; gap:0;
+  border-block:var(--rule-w) solid var(--rule);
+}
+[data-dir="b"] .myth,[data-dir="b"] .blk{background:transparent}
+[data-dir="b"] .myth{padding:16px 26px 20px 0}
+[data-dir="b"] .btn:not(.btn--primary){border:0; background:var(--field-3); box-shadow:var(--shadow-lift)}
+[data-dir="b"] .btn:not(.btn--primary):active{transform:translateY(3px); box-shadow:none}
+[data-dir="b"] .blk .t{color:var(--ink-70)}
+[data-dir="b"] .tag,[data-dir="b"] .field input,[data-dir="b"] .field select{border:0}
+[data-dir="b"] .field input,[data-dir="b"] .field select{background:var(--field-3)}
+
+/* C — two inks, misregistered. The press was cheap and nobody was careful. */
+[data-dir="c"] .page-frame{display:none}
+[data-dir="c"] h1.display,[data-dir="c"] h2.display{
+  text-shadow:3px 3px 0 var(--accent);
+}
+[data-dir="c"] .band{position:relative; overflow:hidden}
+[data-dir="c"] .band--alt::before{
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.34; z-index:0;
+  background-image:radial-gradient(var(--ink-40) 1px, transparent 1.3px);
+  background-size:7px 7px;
+}
+[data-dir="c"] .myth,[data-dir="c"] .cell,[data-dir="c"] .blk{position:relative}
+[data-dir="c"] .tag{transform:rotate(-1.4deg)}
+[data-dir="c"] .btn{transform:rotate(-.6deg)}
+[data-dir="c"] .btn:hover{transform:rotate(-.6deg) translateY(-2px)}
+
+/* D — the monitor: corner ticks and a running frame guide */
+[data-dir="d"] .page-frame{
+  position:fixed; inset:14px; pointer-events:none; z-index:30; border:0;
+  background:
+    linear-gradient(var(--guide),var(--guide)) 0 0/18px 1px no-repeat,
+    linear-gradient(var(--guide),var(--guide)) 0 0/1px 18px no-repeat,
+    linear-gradient(var(--guide),var(--guide)) 100% 0/18px 1px no-repeat,
+    linear-gradient(var(--guide),var(--guide)) 100% 0/1px 18px no-repeat,
+    linear-gradient(var(--guide),var(--guide)) 0 100%/18px 1px no-repeat,
+    linear-gradient(var(--guide),var(--guide)) 0 100%/1px 18px no-repeat,
+    linear-gradient(var(--guide),var(--guide)) 100% 100%/18px 1px no-repeat,
+    linear-gradient(var(--guide),var(--guide)) 100% 100%/1px 18px no-repeat;
+  opacity:.7;
+}
+[data-dir="a"] .page-frame,[data-dir="d"] .page-frame{display:block}
+.page-frame{display:none}
+
+/* ═══ DEMO CHROME — not part of any direction ═════════════════════════════ */
+.switcher{
+  position:fixed; left:0; right:0; bottom:0; z-index:60;
+  background:#0B0D0F; color:#F2F3F4; border-top:1px solid #2A3035;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px;
+}
+.switcher__in{display:flex; align-items:stretch; gap:0; overflow-x:auto}
+.switcher button{
+  flex:1 1 0; min-width:132px; background:none; border:0; border-right:1px solid #2A3035;
+  color:#8C959C; padding:11px 12px; cursor:pointer; text-align:left; line-height:1.3;
+  font-family:inherit; font-size:11px; letter-spacing:.06em;
+}
+.switcher button:hover{color:#F2F3F4; background:#15191C}
+.switcher button[aria-pressed="true"]{color:#0B0D0F; background:#F2F3F4}
+.switcher button b{display:block; font-size:12.5px; letter-spacing:.1em; text-transform:uppercase}
+.switcher button i{font-style:normal; opacity:.75}
+.switcher .swatches{display:flex; gap:3px; margin-top:6px}
+.switcher .swatches span{width:13px; height:9px; display:block; border:1px solid rgba(255,255,255,.18)}
+.switcher__meta{
+  flex:0 0 auto; display:flex; align-items:center; gap:14px; padding:0 14px; color:#6C757C;
+  border-left:1px solid #2A3035;
+}
+@media(max-width:900px){.switcher__meta{display:none}}
+@media(max-width:560px){
+  .switcher button{min-width:96px; padding:9px 9px}
+  .switcher button i{display:none}
+  .switcher .swatches{margin-top:5px}
+}
+.spec{
+  position:fixed; right:14px; bottom:88px; z-index:59; width:min(330px,calc(100vw - 28px));
+  background:#0B0D0F; color:#D7DBDE; border:1px solid #2A3035; padding:16px 18px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px; line-height:1.55;
+}
+.spec[hidden]{display:none}
+.spec h4{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#F2F3F4; margin-bottom:8px}
+.spec dl{display:grid; grid-template-columns:64px 1fr; gap:4px 10px; margin-top:10px}
+.spec dt{color:#6C757C}
+.spec p{color:#A9B1B7; margin-bottom:4px}
+.spec .close{position:absolute; top:8px; right:10px; background:none; border:0; color:#6C757C;
+  cursor:pointer; font-family:inherit; font-size:14px}
+
+/* ── motion ──────────────────────────────────────────────────────────────── */
+.reveal{opacity:0; transform:translateY(14px);
+  transition:opacity 420ms cubic-bezier(.2,0,0,1), transform 420ms cubic-bezier(.2,0,0,1)}
+.reveal.is-in{opacity:1; transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important; transition-duration:.01ms!important}
+  .reveal{opacity:1; transform:none}
+  html{scroll-behavior:auto}
+}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<div class="page-frame" aria-hidden="true"></div>
+
+<!-- ══ NAV ═══════════════════════════════════════════════════════════════ -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 1000 1000" aria-hidden="true" fill="none">
+        <path d="M 651.54 134.14 A 396 396 0 0 1 814.17 741.07" stroke="currentColor" stroke-width="52"/>
+        <path d="M 741.07 814.17 A 396 396 0 0 1 448.31 892.61" stroke="currentColor" stroke-width="52"/>
+        <path d="M 348.46 865.86 A 396 396 0 0 1 134.14 348.46" stroke="currentColor" stroke-width="52"/>
+        <path d="M 185.83 258.93 A 396 396 0 0 1 551.69 107.39" stroke="currentColor" stroke-width="52"/>
+        <rect x="334" y="640" width="332" height="18" fill="currentColor"/>
+        <text x="500" y="618" text-anchor="middle" fill="currentColor" font-family="Archivo,sans-serif"
+              font-weight="900" font-size="540">1</text>
+      </svg>
+      <span class="nm">The Weekend<br>Film School</span>
+    </a>
+    <nav class="navlinks" aria-label="Sections">
+      <a href="#day">The day</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#ladder">The ladder</a>
+      <a href="#dates">Dates</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <span class="data tc">Hyderabad · 12:00–19:00</span>
+    <a class="btn btn--primary" href="#book">Put my name down</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
+<section class="band hero">
+  <div class="wrap">
+    <span class="data eyebrow">Hyderabad · Established by a nobody · 2025</span>
+    <h1 class="display">You have directed four hundred films already.<br><em>All of them in your head.</em></h1>
+    <p class="lede">Make one that exists. You arrive on a Saturday knowing nobody. By seven that
+      evening your film has been watched by a room, with your name in the credits. One day.
+      That is the entire ask.</p>
+
+    <div class="myths">
+      <div class="myth"><s>You need a camera</s><span>The one in your pocket shoots 4K. It is not the reason you have made nothing.</span></div>
+      <div class="myth"><s>You need four years</s><span>You need one Saturday. Lunch is on us.</span></div>
+      <div class="myth"><s>You need a crew</s><span>We hand you four strangers. By evening you will have a group chat.</span></div>
+      <div class="myth"><s>You need contacts</s><span>You need to show up. That is genuinely the whole entry requirement.</span></div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn--primary" href="#book">Put my name down</a>
+      <a class="btn" href="#day">Show me the day, hour by hour</a>
+    </div>
+    <p class="cta-note" style="margin-top:14px">₹1,499 founding price, first two batches. Both days for ₹2,498.</p>
+  </div>
+</section>
+
+<!-- ══ THE SITUATION ═════════════════════════════════════════════════════ -->
+<section class="band band--alt">
+  <div class="wrap">
+    <span class="data serial">WFS/DECK/01</span>
+    <div class="head">
+      <span class="data eyebrow">The situation</span>
+      <h2 class="display">India makes more films than any country on earth.<br>And no way in.</h2>
+      <p class="lede">There are four ways to learn filmmaking in this city. Three of them are unavailable
+        to a person with a job. The fourth is the entire problem.</p>
+    </div>
+    <div class="grid g4">
+      <div class="cell"><span class="data role dim">Route one</span><h3 class="display">The institute</h3>
+        <p>Several lakh rupees and four years. You have neither.</p></div>
+      <div class="cell"><span class="data role dim">Route two</span><h3 class="display">The one-off workshop</h3>
+        <p>Teaches a fragment, ends, and leaves you exactly where you started.</p></div>
+      <div class="cell"><span class="data role dim">Route three</span><h3 class="display">The online course</h3>
+        <p>Bought in a burst of resolve. Abandoned at lesson four.</p></div>
+      <div class="cell"><span class="data role dim">Route four</span><h3 class="display">Knowing somebody</h3>
+        <p>This is not a route. This is the problem, wearing a route's clothes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO IS STUCK ══════════════════════════════════════════════════════ -->
+<section class="band">
+  <div class="wrap">
+    <span class="data serial">WFS/DECK/02</span>
+    <div class="head">
+      <span class="data eyebrow">Who is stuck, and where</span>
+      <h2 class="display">Five people. One wall. No door.</h2>
+    </div>
+    <div class="grid g5">
+      <div class="cell"><span class="data role dim">24 to 35, employed</span><h3 class="display">The professional</h3>
+        <p>Watches an enormous amount of cinema. Has wanted to make something for six years. Has never made anything, because a film needs five other people and a deadline, and neither is for sale.</p></div>
+      <div class="cell"><span class="data role dim">Trained, unseen</span><h3 class="display">The actor</h3>
+        <p>Needs footage to be cast and needs to be cast to get footage. The showreel is a bathroom mirror and one wedding video.</p></div>
+      <div class="cell"><span class="data role dim">Fourteen drafts deep</span><h3 class="display">The writer</h3>
+        <p>Writing is the only part of filmmaking you can do alone, and it is the part that needs everyone else.</p></div>
+      <div class="cell"><span class="data role dim">Final year, running out</span><h3 class="display">The student</h3>
+        <p>Graduates into a job in three months and knows the window is closing. Cannot afford an institute.</p></div>
+      <div class="cell"><span class="data role dim">New to the city</span><h3 class="display">The mover</h3>
+        <p>Arrived for work. Knows nobody. The scene runs entirely on who you already know.</p></div>
+    </div>
+    <p class="lede mk" style="margin-top:30px; color:var(--ink)">
+      What they lack is not knowledge. It is a crew, a deadline, a room, and somebody to watch it.
+      None of those four is for sale anywhere in this city.</p>
+  </div>
+</section>
+
+<!-- ══ WHAT WE SELL — THE FOUR NUMBERS ═══════════════════════════════════ -->
+<section class="band band--alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="data eyebrow">So we sell exactly those four things</span>
+      <h2 class="display">Packaged as one Saturday.</h2>
+    </div>
+    <div class="figures">
+      <div class="fig"><b>1 day</b><span>Twelve noon to seven at night</span></div>
+      <div class="fig"><b>₹1,499</b><span>Founding price. Roughly a nice dinner for two</span></div>
+      <div class="fig"><b>5</b><span>Strangers who become your team</span></div>
+      <div class="fig"><b>1 film</b><span>Finished, screened, credited, yours</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE DAY ═══════════════════════════════════════════════════════════ -->
+<section class="band" id="day" data-stock="schedule">
+  <div class="wrap">
+    <span class="data serial">WFS/CALL-SHEET/01</span>
+    <div class="head">
+      <span class="data eyebrow">What the day actually looks like</span>
+      <h2 class="display">Nine blocks. Seven hours. One film at the end of it.</h2>
+      <p class="lede">We start at noon because a person with a job has a Saturday, not a magic hour.
+        Every block below is a real duration, not a promise.</p>
+    </div>
+    <div class="day">
+      <div class="blk"><span class="data t">12:00 – 13:45</span><h3 class="display">Learn</h3>
+        <p>Introductions, then the top twenty per cent of what actually matters: story, framing, sound,
+          and the three shots every scene needs. Teams handed over. Script and assignments out.</p></div>
+      <div class="blk blk--free"><span class="data t">13:45 – 14:15</span><h3 class="display">Lunch</h3>
+        <p>On us, and you eat it with your captain. This is not a break. It is where the film gets
+          argued about.</p></div>
+      <div class="blk"><span class="data t">14:15 – 16:15</span><h3 class="display">Shoot</h3>
+        <p>Two hours of making it. Phones on Saturday, laptops on Sunday. Everything within two hundred
+          metres. Nobody sits in traffic.</p></div>
+      <div class="blk"><span class="data t">16:15 – 17:15</span><h3 class="display">Cut</h3>
+        <p>Edit, sound, music, titles with everyone's name in them. There is a hard export, and somebody
+          always asks for ten more minutes.</p></div>
+      <div class="blk"><span class="data t">17:15 – 19:00</span><h3 class="display">Screen</h3>
+        <p>Everyone watches everything. Applause after every single film. Feedback, photographs, and at
+          least one person filming the screen.</p></div>
+    </div>
+    <div class="rule-note">
+      <div>
+        <h3 class="display mk">The rule that makes it work</h3>
+        <p>Everything is shot within two hundred metres of the venue. The cafe, the terrace, the
+          stairwell, the street outside. It sounds like a limitation. It is the only reason your film
+          gets finished, and it forces a real scene instead of a montage of establishing shots.</p>
+      </div>
+      <div>
+        <h3 class="display">Before you arrive</h3>
+        <p>Five short lessons, forty minutes each, included in the price. So nobody spends the first
+          hour learning what a shot list is. Classroom time goes to the parts you cannot learn alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE FIVE LESSONS ══════════════════════════════════════════════════ -->
+<section class="band">
+  <div class="wrap">
+    <div class="head">
+      <span class="data eyebrow">Included in the price · watch before the weekend</span>
+      <h2 class="display">Five lessons. Forty minutes each.</h2>
+    </div>
+    <div class="grid g5">
+      <div class="cell"><span class="data role dim">Lesson one</span><h3 class="display">Story</h3>
+        <p>What actually works at four minutes, and what does not.</p></div>
+      <div class="cell"><span class="data role dim">Lesson two</span><h3 class="display">Frame</h3>
+        <p>Composition and coverage on a phone.</p></div>
+      <div class="cell"><span class="data role dim">Lesson three</span><h3 class="display">Sound</h3>
+        <p>The reason your last video looked fine and felt terrible.</p></div>
+      <div class="cell"><span class="data role dim">Lesson four</span><h3 class="display">Performance</h3>
+        <p>Directing your friend, who is not an actor, and knows it.</p></div>
+      <div class="cell"><span class="data role dim">Lesson five</span><h3 class="display">Cut</h3>
+        <p>Assembly, rhythm, titles, export.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRACKS ════════════════════════════════════════════════════════════ -->
+<section class="band band--alt" id="tracks">
+  <div class="wrap">
+    <span class="data serial">WFS/TRACKS/01</span>
+    <div class="head">
+      <span class="data eyebrow">Because there are only three ways to shoot anything now</span>
+      <h2 class="display">Two tracks run every weekend.<br>Phones on Saturday. AI on Sunday.</h2>
+      <p class="lede">Same deadline, same screening, same room. Pick the tools you want to learn, or do
+        both days and save ₹500.</p>
+    </div>
+    <div class="grid g3">
+      <div class="cell"><span class="data role dim">Track one · Saturday</span><h3 class="display">Mobile</h3>
+        <p>Everything on the phone in your pocket. Story, framing, sound, performance, the cut.
+          Everything you were going to buy a camera for and then not use.</p>
+        <span class="data">₹1,499 founding · ₹1,999 standard</span></div>
+      <div class="cell"><span class="data role dim">Track two · Sunday</span><h3 class="display">AI</h3>
+        <p>Laptops instead of cameras. Prompting, shot design, and keeping your character's face the
+          same in shot two. A new craft, and almost nobody teaches it properly.</p>
+        <span class="data">₹1,499 founding · ₹2,499 standard</span></div>
+      <div class="cell"><span class="data role dim">Track three · at the top</span><h3 class="display">Gear</h3>
+        <p>Real cameras, real lights, a proper sound kit, and someone who does this for a living
+          standing next to you. Earned, not bought.</p>
+        <span class="data">Intensive level only</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE LADDER ════════════════════════════════════════════════════════ -->
+<section class="band" id="ladder">
+  <div class="wrap">
+    <span class="data serial">WFS/LADDER/01</span>
+    <div class="head">
+      <span class="data eyebrow">Then a ladder, not a course</span>
+      <h2 class="display">Every level ends with a film that exists.</h2>
+      <p class="lede">Every level also gives you a better person for longer. You only ever commit to the
+        level you are on.</p>
+    </div>
+    <div class="ladder">
+      <div class="rung">
+        <div><span class="data rung__step">Step one</span><span class="rung__name">The Weekend</span></div>
+        <div><p class="mk">One day, phones or laptops. A resource person in the room and a captain with
+          your team all day. You finish a 2 to 5 minute film by the evening.
+          <span class="who">Open to absolutely anyone. Zero experience assumed.</span></p></div>
+        <div class="rung__price">₹1,499</div>
+      </div>
+      <div class="rung">
+        <div><span class="data rung__step">Step two</span><span class="rung__name">The Month</span></div>
+        <div><p>Four weekends. One captain attached to your team for the whole month. Deeper story work,
+          real casting, a proper edit, published with full credits.
+          <span class="who">For weekend graduates. Often the same person you met on the Saturday, which is the point.</span></p></div>
+        <div class="rung__price">₹6,999</div>
+      </div>
+      <div class="rung">
+        <div><span class="data rung__step">Step three</span><span class="rung__name">The Intensive</span></div>
+        <div><p>Eight weekends. Real cameras, lights and sound kit, and someone who does this for a living
+          with your team throughout.
+          <span class="who">For month graduates. This is where the level of the room changes.</span></p></div>
+        <div class="rung__price">₹19,999</div>
+      </div>
+      <div class="rung rung--top">
+        <div><span class="data rung__step">Step four</span><span class="rung__name">The Original</span></div>
+        <div><p>Get good enough and we produce your film ourselves. Real budget, real crew, released on
+          our channel. You direct, we pay.
+          <span class="who">Selected, not sold.</span></p></div>
+        <div class="rung__price">Free</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO IS IN THE ROOM ════════════════════════════════════════════════ -->
+<section class="band band--alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="data eyebrow">The part that is actually the product</span>
+      <h2 class="display">Who is standing next to you, and for how long.</h2>
+    </div>
+    <div class="grid g3">
+      <div class="cell"><span class="data role dim">The weekend</span><h3 class="display">A day</h3>
+        <p>A resource person teaching the room, and a captain with your team from noon until the
+          screening. Two films per captain, so nobody is running six.</p></div>
+      <div class="cell"><span class="data role dim">The month</span><h3 class="display">Four weekends</h3>
+        <p>One captain attached to your team for the whole month. Long enough to learn how they think,
+          and to be pushed properly.</p></div>
+      <div class="cell"><span class="data role dim">The intensive</span><h3 class="display">Eight weekends</h3>
+        <p>Someone who does this for a living, with your team, on a real set with real equipment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DATES ═════════════════════════════════════════════════════════════ -->
+<section class="band" id="dates" data-stock="money">
+  <div class="wrap">
+    <span class="data serial">WFS/DATES/BATCH-01</span>
+    <div class="head">
+      <span class="data eyebrow">Upcoming</span>
+      <h2 class="display">The next one.</h2>
+      <p class="lede">Founding price applies to the first two batches only. After that it is ₹1,999 and
+        it stays there.</p>
+    </div>
+    <div class="dates">
+      <div class="dt">
+        <div class="dt__when"><b>22</b><span class="data">Aug · Sat</span></div>
+        <div><h3 class="display">Mobile Filmmaking · Batch One</h3>
+          <p class="meta">Banjara Hills · 12 noon to 7 PM · phones only, bring a charger · 30 seats</p></div>
+        <div class="dt__act"><span class="data tag">₹1,499 founding</span>
+          <a class="btn btn--primary" href="#book">Put my name down</a></div>
+      </div>
+      <div class="dt">
+        <div class="dt__when"><b>23</b><span class="data">Aug · Sun</span></div>
+        <div><h3 class="display">AI Filmmaking · Batch One</h3>
+          <p class="meta">Madhapur · 12 noon to 7 PM · bring a laptop and a charger, tool credits included · 25 seats</p></div>
+        <div class="dt__act"><span class="data tag">₹1,499 founding</span>
+          <a class="btn btn--primary" href="#book">Put my name down</a></div>
+      </div>
+      <div class="dt">
+        <div class="dt__when"><b>12</b><span class="data">Sep · Sat</span></div>
+        <div><h3 class="display">Mobile Filmmaking · Batch Two</h3>
+          <p class="meta">Banjara Hills · last batch at the founding price</p></div>
+        <div class="dt__act"><span class="data tag">₹1,499 founding</span>
+          <a class="btn" href="#book">Join the list</a></div>
+      </div>
+      <div class="dt">
+        <div class="dt__when"><b>03</b><span class="data">Oct · Sat</span></div>
+        <div><h3 class="display">Mobile Filmmaking · Batch Three</h3>
+          <p class="meta">Banjara Hills · standard pricing begins · opens once Batch Two fills</p></div>
+        <div class="dt__act"><span class="data tag">₹1,999</span>
+          <a class="btn" href="#book">Notify me</a></div>
+      </div>
+    </div>
+    <p class="price-note mk"><b>Do both days for ₹2,498</b> instead of ₹2,998. Saturday is a phone,
+      Sunday is a laptop, and the two together are the fastest way to find out which one you are.
+      Seat counts are not shown until seats are genuinely selling — you can smell a fake countdown
+      as well as we can.</p>
+  </div>
+</section>
+
+<!-- ══ THE SCREENING — the one inverted block ════════════════════════════ -->
+<section class="band invert">
+  <div class="wrap">
+    <span class="data eyebrow">Student films</span>
+    <h2 class="display">There are none yet.</h2>
+    <div class="empty">
+      <span class="data">First screening · 22 August 2026 · 17:15</span>
+      <p>The first batch has not run. Rather than fill this space with stock footage and invented
+        titles, it stays empty until six real films are sitting in it, made by people who had never
+        made anything before. Yours could be one of them, which is a considerably better offer than
+        a testimonial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ═══════════════════════════════════════════════════════════════ -->
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="head">
+      <span class="data eyebrow">Questions people actually ask</span>
+      <h2 class="display">Before you decide.</h2>
+    </div>
+    <div class="faq">
+      <details class="qa" open><summary>I have never made anything. Is this for me?</summary>
+        <p>Yes, and that is the whole point. The weekend is built for people with zero experience. If you
+          have made films before you will still learn things, but you are not the person we designed it for.</p></details>
+      <details class="qa"><summary>Do I need a camera or any equipment?</summary>
+        <p>No. Saturday is shot on phones and Sunday is made on laptops. If someone on your team owns a
+          tripod or a clip mic they can bring it, but nothing is required. Bring a charger.</p></details>
+      <details class="qa"><summary>Do I need to bring a team?</summary>
+        <p>No. Most people come alone and we place them in a team of five. If you want to arrive with your
+          own five, you can do that too.</p></details>
+      <details class="qa"><summary>Is lunch included?</summary>
+        <p>Yes. Lunch is on us, and you eat it with your captain. That half hour is where most teams work
+          out what their film actually is.</p></details>
+      <details class="qa"><summary>Who teaches?</summary>
+        <p>Someone who does this for a living. A resource person teaches the room, and a captain stays with
+          your team from noon until the screening.</p></details>
+      <details class="qa"><summary>Where do the actors come from?</summary>
+        <p>The Nobody Club directory, which is free for actors to list on. You shortlist, and we help you
+          make the calls on the day. Team members are also allowed to act, and often do.</p></details>
+      <details class="qa"><summary>Do I have to travel around the city to shoot?</summary>
+        <p>No, and this is deliberate. Everything is shot within two hundred metres of the venue. It sounds
+          limiting until you realise it is the only reason your film gets finished.</p></details>
+      <details class="qa"><summary>What if my film is bad?</summary>
+        <p>It will be. So was everyone's, including the founder's, which is currently in a folder marked do
+          not open. The point is that it exists, you finished it, and you now know exactly what you would
+          fix. That last part is the whole education.</p></details>
+      <details class="qa"><summary>Can I do the AI day without technical skills?</summary>
+        <p>Yes. The AI day teaches the tools from zero. What matters more is story sense, and that is
+          taught too.</p></details>
+      <details class="qa"><summary>Who owns the film?</summary>
+        <p>You do. Your film stays yours and your credits stay yours. We hold a permanent non-exclusive
+          right to screen and promote it, which is how it ends up at our screenings and on our channel.</p></details>
+      <details class="qa"><summary>Do you get my film into festivals?</summary>
+        <p>We do not submit on your behalf and we promise no selections. What we do is share the festival
+          calendar, tell you which ones actually fit your film, and help you get your submission materials
+          in order. The films are yours to send.</p></details>
+      <details class="qa"><summary>Is there a refund?</summary>
+        <p>Full refund up to seven days before the weekend. After that the venue and the resource person
+          are already paid, so we move you to the next batch instead.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOOK ══════════════════════════════════════════════════════════════ -->
+<section class="band" id="book" data-stock="in">
+  <div class="wrap">
+    <span class="data serial">WFS/FORM/01</span>
+    <div class="head">
+      <span class="data eyebrow">The last step</span>
+      <h2 class="display">You already know you want to make one.<br>That was never the question.</h2>
+      <p class="lede">The question was always who would be in it with you, when you would do it, and
+        whether anyone would watch. We answer all three, on a Saturday, for the price of a nice dinner.</p>
+    </div>
+    <form class="form" onsubmit="event.preventDefault(); this.querySelector('.btn').textContent='This is a demo — nothing was sent';">
+      <div class="field">
+        <label class="data" for="nm">Directed by</label>
+        <input id="nm" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label class="data" for="ph">WhatsApp number</label>
+        <input id="ph" name="phone" type="tel" inputmode="numeric" autocomplete="tel"
+               placeholder="10 digits" required>
+        <span class="hint">We message you the venue and the pre-course. No calls.</span>
+      </div>
+      <div class="field">
+        <label class="data" for="dy">Which day</label>
+        <select id="dy" name="day">
+          <option>Saturday 22 August · Mobile · ₹1,499</option>
+          <option>Sunday 23 August · AI · ₹1,499</option>
+          <option>Both days · ₹2,498</option>
+          <option>Tell me about a later batch</option>
+        </select>
+      </div>
+      <button class="btn btn--primary" type="submit">Put my name down</button>
+      <p class="cta-note" style="margin-top:12px">Bring nothing but the itch.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="band foot">
+  <div class="wrap">
+    <span class="data">The Weekend Film School · Hyderabad · No godfathers required</span>
+    <span class="data" style="margin-top:8px; color:var(--ink-40)">Design demo · illustrative dates and prices · not a live page</span>
+  </div>
+</footer>
+
+<!-- ══ DEMO CHROME ═══════════════════════════════════════════════════════ -->
+<div class="spec" id="spec" hidden>
+  <button class="close" id="specClose" aria-label="Close direction notes">×</button>
+  <h4 id="specName">—</h4>
+  <p id="specThesis">—</p>
+  <dl>
+    <dt>Type</dt><dd id="specType">—</dd>
+    <dt>Material</dt><dd id="specMat">—</dd>
+    <dt>Signature</dt><dd id="specSig">—</dd>
+    <dt>Costs you</dt><dd id="specCost">—</dd>
+  </dl>
+</div>
+
+<div class="switcher" role="group" aria-label="Design direction">
+  <div class="switcher__in">
+    <button data-set="a" aria-pressed="true"><b>1 · Call sheet</b><i>ink on script stock</i>
+      <span class="swatches"><span style="background:#EAE6DC"></span><span style="background:#C3D6E8"></span><span style="background:#EFD27A"></span><span style="background:#17693F"></span><span style="background:#14161A"></span></span></button>
+    <button data-set="b" aria-pressed="false"><b>2 · Hard light</b><i>one sun, overhead</i>
+      <span class="swatches"><span style="background:#E6ECE2"></span><span style="background:#CBD5C5"></span><span style="background:#6F7874"></span><span style="background:#C4241C"></span><span style="background:#141A18"></span></span></button>
+    <button data-set="c" aria-pressed="false"><b>3 · Wildposting</b><i>two inks, misregistered</i>
+      <span class="swatches"><span style="background:#E4E2DA"></span><span style="background:#F5325B"></span><span style="background:#1B2ECC"></span><span style="background:#171C3A"></span><span style="background:#CFCCC0"></span></span></button>
+    <button data-set="d" aria-pressed="false"><b>4 · Edit bay</b><i>graded monitor</i>
+      <span class="swatches"><span style="background:#1C2024"></span><span style="background:#23282D"></span><span style="background:#3DE08A"></span><span style="background:#FF4FD8"></span><span style="background:#E8EAEC"></span></span></button>
+    <div class="switcher__meta">
+      <span>Press 1–4</span>
+      <button id="specBtn" style="border:0;border-left:1px solid #2A3035;flex:none;min-width:0;padding:11px 14px">Notes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var SPEC = {
+    a:{name:"A · Call sheet",
+       thesis:"The school already owns an identity and it is production paperwork. Ink and rules on script-revision paper stock, where the stock colour is the message: blue is the schedule, goldenrod is money, green is you are in.",
+       type:"Archivo 900 / wdth 112 + IBM Plex Mono, caps, for anything checkable",
+       mat:"2px ink rules. Zero radius, zero shadow, zero gradient. A printed frame around the page.",
+       sig:"The green revision asterisk in the margin, against the one line that matters — plus a real serial on every block.",
+       cost:"It is the quietest of the four. It reads as trustworthy rather than dramatic, and it is one step from broadsheet."},
+    b:{name:"B · Hard light",
+       thesis:"Every film brand sells the dark room. This day happens at noon on a Hyderabad terrace, in the light every cinematographer avoids. So the page is lit that way: pale limewash, green-black type, one sun directly overhead.",
+       type:"Archivo alone, three registers off the width axis. No mono anywhere — width 92 caps do the data job.",
+       mat:"Hard shadow, 6px straight down, zero blur, identical everywhere. No outlines. No texture. No radius.",
+       sig:"Shadow as physics. A second offset value would mean a second sun. The red dot is a tally light: it means someone is recording.",
+       cost:"Hard shadows are adjacent to the neo-brutalist wave. It holds only while radius stays 0 and nothing gets an outline."},
+    c:{name:"C · Wildposting",
+       thesis:"Not an institute — a flyer pasted on a wall by somebody with no permission and a deadline. Two-ink riso on newsprint, one blue plate and one fluorescent plate, misregistered because nobody was careful.",
+       type:"Anybody at width 82 for the shouting + Familjen Grotesk for reading + DM Mono for data",
+       mat:"3px rules, halftone in the shade, 3px plate offset on every headline, everything a degree off square.",
+       sig:"The misregistration itself. The headline prints twice, slightly wrong, the way a cheap two-colour press actually fails.",
+       cost:"It is loud, and loud ages fastest. It also fights the existing brand mark, which was built for flat stock."},
+    d:{name:"D · Edit bay",
+       thesis:"Dark, but not the auditorium. This is the graded monitor at five in the evening, when the thing you shot becomes a film. Graphite rather than black, and the accents are instrument colours rather than mood.",
+       type:"Instrument Sans 700 tight + Martian Mono for every value on the page",
+       mat:"1px guide rules, 2px radius, no shadow. Two surfaces and an inset well.",
+       sig:"The page is framed like a monitor: corner ticks, a 2.39:1 guide across the hero, running timecode in the chrome.",
+       cost:"It is the closest of the four to the thing you already rejected. Dark plus a bright accent is the category reflex; only the instrument logic keeps it clear."}
+  };
+  var root=document.documentElement, btns=[].slice.call(document.querySelectorAll('.switcher button[data-set]'));
+  var spec=document.getElementById('spec');
+
+  function set(k){
+    root.setAttribute('data-dir',k);
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.set===k)); });
+    var s=SPEC[k];
+    document.getElementById('specName').textContent=s.name;
+    document.getElementById('specThesis').textContent=s.thesis;
+    document.getElementById('specType').textContent=s.type;
+    document.getElementById('specMat').textContent=s.mat;
+    document.getElementById('specSig').textContent=s.sig;
+    document.getElementById('specCost').textContent=s.cost;
+    try{ localStorage.setItem('wfs-dir',k); }catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click',function(){ set(b.dataset.set); }); });
+  document.addEventListener('keydown',function(e){
+    if(/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName)) return;
+    var m={'1':'a','2':'b','3':'c','4':'d'};
+    if(m[e.key]) set(m[e.key]);
+  });
+  document.getElementById('specBtn').addEventListener('click',function(){ spec.hidden=!spec.hidden; });
+  document.getElementById('specClose').addEventListener('click',function(){ spec.hidden=true; });
+
+  var q=(location.search.match(/[?&]d=([a-d])/)||[])[1];
+  var saved=null; try{ saved=localStorage.getItem('wfs-dir'); }catch(e){}
+  set(q || (saved && SPEC[saved] ? saved : 'a'));
+
+  /* running timecode — only visible in direction D's chrome, harmless elsewhere */
+  var tc=document.querySelector('.tc');
+  if(tc && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var f=0;
+    setInterval(function(){
+      if(root.getAttribute('data-dir')!=='d'){ tc.textContent='Hyderabad · 12:00–19:00'; return; }
+      f=(f+1)%24;
+      var d=new Date(), p=function(n){return String(n).padStart(2,'0')};
+      tc.textContent=p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds())+':'+p(f);
+    },1000/12);
+  }
+
+  /* One restrained reveal. Content must never be able to get stuck hidden:
+     anything already on screen shows immediately, and a timer reveals the
+     rest if the observer never fires. */
+  var els=[].slice.call(document.querySelectorAll(
+    '.band .head, .grid, .day, .ladder, .dates, .figures, .myths, .form'));
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -4% 0px'});
+    els.forEach(function(el){
+      if(el.getBoundingClientRect().top < innerHeight){ el.classList.add('is-in'); return; }
+      el.classList.add('reveal'); io.observe(el);
+    });
+    setTimeout(function(){ els.forEach(function(el){ el.classList.add('is-in'); }); }, 4000);
+  }
+})();
+</script>
+</body>
+</html>
